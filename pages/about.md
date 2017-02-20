@@ -30,4 +30,4 @@ accomplished something tangible. (Making fonts always felt a bit like sending my
 out into the digital æther.)
 
 If you’d like to keep up with what I’m doing nowadays, you can check out my blog, [Chuck Masterson’s
-Actual Blog](https://www.chuckmasterson.com).
+Actual Blog](http://www.chuckmasterson.com).
