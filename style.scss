@@ -18,9 +18,13 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  background: white;
+  font: 16px/1.4 $body-font;
   color: $darkGray;
+  display: flex;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -31,9 +35,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $title-font;
   color: $darkerGray;
-  font-weight: bold;
+  font-weight: normal;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -45,22 +49,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 27px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 24px;
   color: $gray;
 }
 
@@ -115,6 +119,26 @@ img {
   max-width: none;
 }
 
+figure {
+  text-align: center;
+  margin: 10px;
+  &.right {
+    float: right;
+    margin-right: 0;
+  }
+  &.left {
+    float: left;
+    margin-left: 0;
+  }
+  figcaption {
+    font-size: 85%;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
 .date {
   font-style: italic;
   color: $gray;
@@ -155,33 +179,16 @@ img {
 }
 
 .masthead {
+  font-family: 'Solveig';
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
   }
 }
 
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
-}
-
 .site-info {
-  float: left;
+  text-align: center;
 
   @include mobile {
     float: none;
@@ -194,52 +201,55 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
+  font-family: 'Solveig Display';
+  font-size: 80px;
   letter-spacing: 1px;
+  line-height: 1;
+}
+
+.site-name,
+.site-description,
+.blank-line,
+.masthead nav {
+  margin: 0 auto;
+  border-bottom: 2px solid lightblue;
+  text-align: center;
 }
 
 .site-description {
-  margin: -5px 0 0 0;
   color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
+  font-style: italic;
+}
+.site-description,
+.blank-line,
+.masthead nav {
+  font-size: 24px;
+  line-height: 24px;
 }
 
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
+.masthead nav {
+  font-family: $body-font;
 
   a {
-    margin-left: 20px;
+    font-size: 18px;
     color: $darkGray;
-    text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
+  }
+  a + a {
+    &:before {
+      content: ' · ';
     }
   }
 }
 
 //
-// .main
+// #main
 //
+
+main {
+  flex: 1;
+}
 
 .posts > .post {
   padding-bottom: 2em;
@@ -271,11 +281,32 @@ nav {
   }
 }
 
+.one-third {
+  width: 32%;
+  min-width: 200px;
+  margin: 0 .6%;
+  display: inline-block;
+  float: left;
+  @include mobile {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid $lightGray;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    img {
+      width: 350px;
+      }
+  }
+}
+
 .wrapper-footer {
+  clear: both;
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
+  color: $gray;
+  font-size: 85%;
 }
 
 footer {

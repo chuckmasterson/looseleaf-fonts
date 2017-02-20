@@ -2,17 +2,34 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<p class="center"><b>
+  Open-source, free-to-use fonts for everyone.</b>
+</p>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+<div class="one-third">
+  <a href="/newt/">
+    <img src="/images/NewtFlag.jpg" />
+  </a>
+  <p>
+    <a href="/newt/"><strong>Newt Serif</strong></a>: a whimsical, soft serif.
+  </p>
+</div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="one-third">
+  <a href="/solveig/">
+    <img src="/images/SolveigFlag.jpg" />
+  </a>
+  <p>
+    <a href="/solveig/"><strong>Solveig</strong></a>: an airy, classical sans.
+  </p>
+</div>
+
+<div class="one-third">
+  <a href="/walleye/">
+    <img src="/images/WalleyeSingingfish.svg" />
+  </a>
+  <p>
+    <a href="/walleye/"><strong>Walleye</strong></a>: a modernist, multilingual text serif.
+  </p>
 </div>
